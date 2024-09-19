@@ -2,6 +2,11 @@
 	import Button from '$lib/Button.svelte';
 	import TableComponent from '$lib/Table.svelte';
 	import DynamicComponent from '$lib/Dynamic.svelte';
+
+	import { count } from '../store/counterStore.js';
+	import IncrementButton from '$lib/IncrementButton.svelte';
+	import DecrementButton from '$lib/DecrementButton.svelte';
+
 	let label = 'Click Me!';
 	let classStyle = 'btn btn-custom';
 
@@ -35,3 +40,8 @@
 <hr />
 
 <DynamicComponent component={Button} {...customAttributes} />
+<hr />
+<h1>Counter: {$count}</h1>
+<!-- Display the value of the count -->
+<IncrementButton />
+<DecrementButton />
