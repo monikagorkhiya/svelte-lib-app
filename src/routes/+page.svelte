@@ -3,7 +3,7 @@
 	import TableComponent from '$lib/Table.svelte';
 	import DynamicComponent from '$lib/Dynamic.svelte';
 
-	import { count } from '$lib/store/counterStore.js';
+	import { count } from '../store/counterStore.js';
 	import IncrementButton from '$lib/IncrementButton.svelte';
 	import DecrementButton from '$lib/DecrementButton.svelte';
 
