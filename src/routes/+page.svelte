@@ -1,6 +1,7 @@
 <script>
 	import Button from '$lib/Button.svelte';
 	import TableComponent from '$lib/Table.svelte';
+	import DynamicComponent from '$lib/Dynamic.svelte';
 	let label = 'Click Me!';
 	let classStyle = 'btn btn-custom';
 
@@ -14,6 +15,10 @@
 		},
 		{ name: 'Sam Wilson', email: 'sam@email.com', phone: '+91816665656', designation: 'Manager' }
 	];
+	let customAttributes = {
+		label: 'Hello',
+		classStyle: 'btn btn-dynamic'
+	};
 </script>
 
 <h1>Welcome to your library project</h1>
@@ -28,3 +33,5 @@
 <p>2. This is testing Table which is render by library</p>
 <TableComponent tableData={data} />
 <hr />
+
+<DynamicComponent component={Button} {...customAttributes} />
